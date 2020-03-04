@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/utamaFragment">
+
+    <fragment
+        android:id="@+id/utamaFragment"
+        android:name="org.d3if4201.myapplication.UtamaFragment"
+        android:label="fragment_utama"
+        tools:layout="@layout/fragment_utama" >
+        <action
+            android:id="@+id/action_utamaFragment_to_soalFragment"
+            app:destination="@id/soalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soalFragment"
+        android:name="org.d3if4201.myapplication.SoalFragment"
+        android:label="fragment_soal"
+        tools:layout="@layout/fragment_soal" >
+        <action
+            android:id="@+id/action_soalFragment_to_kalahFragment"
+            app:destination="@id/kalahFragment" />
+        <action
+            android:id="@+id/action_soalFragment_to_menangFragment"
+            app:destination="@id/menangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menangFragment"
+        android:name="org.d3if4201.myapplication.menangFragment"
+        android:label="fragment_menang"
+        tools:layout="@layout/fragment_menang" >
+        <action
+            android:id="@+id/action_menangFragment_to_utamaFragment"
+            app:destination="@id/utamaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kalahFragment"
+        android:name="org.d3if4201.myapplication.KalahFragment"
+        android:label="fragment_kalah"
+        tools:layout="@layout/fragment_kalah" >
+        <action
+            android:id="@+id/action_kalahFragment_to_soalFragment"
+            app:destination="@id/soalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if4201.myapplication.aboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
